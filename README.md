@@ -13,11 +13,18 @@
 
 ## 🚀 اجرا روی GitHub Pages
 
-این مخزن با GitHub Actions مستقر می‌شود:
+سایت استاتیک است و آماده انتشار است؛ کافی است Pages را **یک‌بار** فعال کنید (دو روش):
 
-1. کافی است به مخزن `push` کنید؛ workflow فایل `.github/workflows/pages.yml` اجرا می‌شود.
-2. در مخزن، بخش **Settings → Pages** باید با **Build type: GitHub Actions** فعال باشد (یک‌بار فعال‌سازی کافی است).
-3. نشانی سایت: `https://javadxpro.github.io/class/`
+### روش ۱ — ساده‌تر (انتشار از شاخه، بدون نیاز به Actions)
+1. در مخزن: **Settings → Pages**
+2. در بخش **Source** گزینه **Deploy from a branch** را انتخاب کنید.
+3. شاخهٔ `arena/01a0dd13-class` و پوشهٔ `/ (root)` را برگزینید و **Save** بزنید.
+4. پس از چند دقیقه سایت روی `https://javadxpro.github.io/class/` بالا می‌آید.
+
+### روش ۲ — با GitHub Actions
+1. در **Settings → Actions → General** گزینه **Allow all actions and reusable workflows** را فعال کنید.
+2. در **Settings → Pages** بخش **Build type** را روی **GitHub Actions** بگذارید.
+3. هر `push` (یا اجرای دستی workflow از تب Actions) سایت را مستقر می‌کند؛ فایل استقرار: `.github/workflows/pages.yml`.
 
 ## 💻 اجرای محلی
 
