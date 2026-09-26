@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://javadxpro.github.io/class/</loc>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://javadxpro.github.io/class/"/>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=math</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=science</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=farsi</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=arabi</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=english</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=social</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=quran</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=payam</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=defa</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=tech</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=honar</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://javadxpro.github.io/class/book.html?b=negaresh</loc><lastmod>2026-09-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+</urlset>

@@ -1,0 +1,15 @@
+{
+  "name": "نُهم‌یار — خلاصه کتاب‌های کلاس نهم",
+  "short_name": "نُهم‌یار",
+  "description": "خلاصه درس‌به‌درس کتاب‌های پایه نهم با نکات کلیدی و سوالات احتمالی امتحان",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#4f46e5",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

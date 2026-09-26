@@ -1,0 +1,13 @@
+# robots.txt — نُهم‌یار
+User-agent: *
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Bingbot
+User-agent: bingbot
+Allow: /
+
+Sitemap: https://javadxpro.github.io/class/sitemap.xml

@@ -301,8 +301,81 @@
       "</div></details>";
   }
 
+  /* ---------- SEO: متادیتای پویا + پشتیبانی از ?q= ---------- */
+  function setBookMeta(book) {
+    const base = "https://javadxpro.github.io/class/";
+    const title = book.title + " — خلاصه درس‌ها و سوالات امتحان | نُهم‌یار";
+    const desc = "خلاصه درس‌به‌درس " + book.title + " با نکات کلیدی، واژگان و سوالات احتمالی امتحان با پاسخ تشریحی — مجموعه آموزشی نُهم‌یار.";
+    const url = base + "book.html?b=" + book.id;
+    document.title = title;
+    const setMeta = (key, attr, content) => {
+      let el = document.querySelector("meta[" + attr + '="' + key + '"]');
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+    setMeta("description", "name", desc);
+    setMeta("og:title", "property", title);
+    setMeta("og:description", "property", desc);
+    setMeta("og:url", "property", url);
+    let link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
+    }
+    link.href = url;
+    const lessons = [];
+    (book.chapters || []).forEach(c => (c.lessons || []).forEach(l => lessons.push(l.title)));
+    const ld = {
+      "@context": "https://schema.org",
+      "@type": "LearningResource",
+      name: book.title,
+      description: desc,
+      url: url,
+      inLanguage: "fa",
+      isPartOf: { "@type": "WebSite", name: "نُهم‌یار", url: base },
+      educationalLevel: "متوسطه اول — پایه نهم",
+      learningResourceType: ["خلاصه درس", "سوال امتحانی"],
+      about: lessons.slice(0, 12)
+    };
+    let ldEl = document.getElementById("ld-book");
+    if (!ldEl) {
+      ldEl = document.createElement("script");
+      ldEl.type = "application/ld+json";
+      ldEl.id = "ld-book";
+      document.head.appendChild(ldEl);
+    }
+    ldEl.textContent = JSON.stringify(ld);
+  }
+
+  function initQuerySearch() {
+    try {
+      const params = new URLSearchParams(location.search);
+      const q = (params.get("q") || "").trim();
+      if (!q) return;
+      const input = document.getElementById("globalSearch");
+      if (!input) return;
+      input.value = q;
+      input.dispatchEvent(new Event("input"));
+      const books = document.getElementById("books");
+      if (books) books.scrollIntoView({ behavior: "auto", block: "start" });
+    } catch (e) { /* ignore */ }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     renderHome();
     renderBook();
+    const bid = new URLSearchParams(location.search).get("b");
+    const meta = (window.BOOKS_META || []).find(m => m.id === bid);
+    const data = (window.BOOKS_DATA || {})[bid];
+    if (data) setBookMeta(data);
+    else if (meta && bid) {
+      setBookMeta({ id: meta.id, title: meta.title, chapters: [] });
+    }
+    initQuerySearch();
   });
 })();
