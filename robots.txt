@@ -1,4 +1,4 @@
-# robots.txt — نُهم‌یار
+# robots.txt — نهمیتو
 User-agent: *
 Allow: /
 

@@ -1,4 +1,4 @@
-/* ===== نُهم‌یار | منطق سایت ===== */
+/* ===== نهمیتو | منطق سایت ===== */
 (function () {
   "use strict";
 
@@ -182,7 +182,7 @@
     const book = books.find(b => b.id === id) || books[0];
     if (!book) { root.innerHTML = "<p>کتابی یافت نشد.</p>"; return; }
 
-    document.title = book.title + " نهم | نُهم‌یار";
+    document.title = book.title + " نهم | نهمیتو";
     const hero = $("#bookHero");
     if (hero) {
       hero.style.setProperty("--c", book.color || "#4f46e5");
@@ -304,8 +304,8 @@
   /* ---------- SEO: متادیتای پویا + پشتیبانی از ?q= ---------- */
   function setBookMeta(book) {
     const base = "https://javadxpro.github.io/class/";
-    const title = book.title + " — خلاصه درس‌ها و سوالات امتحان | نُهم‌یار";
-    const desc = "خلاصه درس‌به‌درس " + book.title + " با نکات کلیدی، واژگان و سوالات احتمالی امتحان با پاسخ تشریحی — مجموعه آموزشی نُهم‌یار.";
+    const title = book.title + " — خلاصه درس‌ها و سوالات امتحان | نهمیتو";
+    const desc = "خلاصه درس‌به‌درس " + book.title + " با نکات کلیدی، واژگان و سوالات احتمالی امتحان با پاسخ تشریحی — مجموعه آموزشی نهمیتو.";
     const url = base + "book.html?b=" + book.id;
     document.title = title;
     const setMeta = (key, attr, content) => {
@@ -337,7 +337,7 @@
       description: desc,
       url: url,
       inLanguage: "fa",
-      isPartOf: { "@type": "WebSite", name: "نُهم‌یار", url: base },
+      isPartOf: { "@type": "WebSite", name: "نهمیتو", url: base },
       educationalLevel: "متوسطه اول — پایه نهم",
       learningResourceType: ["خلاصه درس", "سوال امتحانی"],
       about: lessons.slice(0, 12)
