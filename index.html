@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نُهم‌یار | خلاصه جامع کتاب‌های کلاس نهم + سوالات احتمالی</title>
+  <meta name="description" content="خلاصه درس‌به‌درس تمام کتاب‌های پایه نهم متوسطه اول به همراه نکات کلیدی و سوالات احتمالی امتحان با پاسخ تشریحی؛ رایگان و قابل استفاده در موبایل و کامپیوتر.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%234f46e5'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>۹</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">۹</span>
+        <span>نُهم‌یار<small>خلاصه کتاب‌های کلاس نهم</small></span>
+      </a>
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="تغییر تم">🌙</button>
+        <a class="btn btn-primary" href="#books">کتاب‌ها</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>همه کتاب‌های <span class="grad">کلاس نهم</span>، جزء به جزء<br>خلاصه‌شده و آمادهٔ امتحان 🎯</h1>
+      <p class="lead">
+        درس‌به‌درس تمام کتاب‌های پایهٔ نهم متوسطه اول؛ با خلاصهٔ هر درس، نکات کلیدی،
+        واژگان مهم و صدها سوال احتمالی امتحان به همراه پاسخ تشریحی — همه در یک سایت سریع و رایگان.
+      </p>
+      <div class="search-box">
+        <span class="search-ico">🔍</span>
+        <input type="search" id="globalSearch" placeholder="جستجو در همه درس‌ها… مثلاً «اتحاد»، «فتوسنتز»، «مشروطه»" autocomplete="off">
+        <div class="search-results" id="globalSearchResults"></div>
+      </div>
+      <div class="hero-badges">
+        <span class="badge">📘 ۱۲ کتاب درسی</span>
+        <span class="badge">📝 سوالات احتمالی با پاسخ</span>
+        <span class="badge">🌗 حالت تاریک</span>
+        <span class="badge">✅ پیگیری پیشرفت مطالعه</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="books">
+    <div class="section-head">
+      <h2>کتاب‌های درسی</h2>
+      <p>روی هر کتاب بزن تا فهرست درس‌ها، خلاصه‌ها و سوالاتش را ببینی.</p>
+    </div>
+    <div class="chips" id="filterChips" style="margin-bottom:20px"></div>
+    <div class="books-grid" id="booksGrid"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>این مجموعه در یک نگاه</h2></div>
+    <div class="stat-row" id="statsRow"></div>
+  </section>
+
+  <section class="section">
+    <div class="about-card">
+      <h3>📖 چطور با نُهم‌یار درس بخوانیم؟</h3>
+      <ol>
+        <li><b>فهرست کتاب را باز کن:</b> هر کتاب به تفکیک فصل و درس مرتب شده است.</li>
+        <li><b>خلاصه و نکات را مرور کن:</b> هر درس یک خلاصهٔ فشرده و «نکات کلیدی» دارد که برای شب امتحان عالی است.</li>
+        <li><b>خودت را بسنج:</b> سوالات احتمالی هر درس را بسته نگه دار، جواب بده و بعد پاسخ تشریحی را مقایسه کن.</li>
+        <li><b>پیشرفتت را نشانه‌گذاری کن:</b> با تیک «این درس را خوانده‌ام»، نوار پیشرفت کتاب پر می‌شود (روی همین مرورگر ذخیره می‌شود).</li>
+      </ol>
+      <p class="legend" style="margin-top:14px">
+        <span>💡 = نکتهٔ مهم</span><span>⭐ = نکات کلیدی</span><span>❓ = سوال احتمالی</span><span>📚 = واژگان</span>
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>ساخته‌شده برای دانش‌آموزان پایهٔ نهم — محتوای آموزشی خلاصه‌شده بر اساس سرفصل‌های کتاب‌های درسی رسمی.</div>
+      <div><a href="index.html">نُهم‌یار</a> · اجرا با GitHub Pages</div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" type="button" aria-label="بازگشت به بالا">▲</button>
+
+  <script src="assets/js/meta.js"></script>
+  <script src="assets/js/data/math.js"></script>
+  <script src="assets/js/data/science.js"></script>
+  <script src="assets/js/data/farsi.js"></script>
+  <script src="assets/js/data/arabi.js"></script>
+  <script src="assets/js/data/english.js"></script>
+  <script src="assets/js/data/social.js"></script>
+  <script src="assets/js/data/quran.js"></script>
+  <script src="assets/js/data/payam.js"></script>
+  <script src="assets/js/data/defa.js"></script>
+  <script src="assets/js/data/tech.js"></script>
+  <script src="assets/js/data/honar.js"></script>
+  <script src="assets/js/data/negaresh.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
