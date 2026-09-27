@@ -141,7 +141,8 @@ img { max-width: 100%; }
 .sr-item .t { font-weight: 700; font-size: 0.95rem; }
 .sr-item .s { color: var(--text-soft); font-size: 0.82rem; line-height: 1.8; }
 .sr-item mark { background: color-mix(in srgb, var(--accent) 30%, transparent); color: inherit; border-radius: 4px; padding: 0 2px; }
-.sr-empty { padding: 18px; text-align: center; color: var(--text-soft); }
+.sr-empty { padding: 22px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; color: var(--text-soft); }
+.sr-empty .ico-lg { width: 2.6em; height: 2.6em; opacity: 0.55; }
 
 /* ===== بخش‌ها ===== */
 .section { max-width: 1200px; margin: 0 auto; padding: 42px 20px; }
@@ -273,7 +274,8 @@ img { max-width: 100%; }
   border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
   border-radius: 12px; padding: 12px 16px; margin: 14px 0; font-size: 0.93rem;
 }
-.lesson-summary .note::before { content: "💡 نکته: "; font-weight: 800; color: var(--accent); }
+.lesson-summary .note-label { color: var(--accent); font-weight: 800; margin-inline-end: 4px; }
+.lesson-summary .note-label .ico { width: 1.1em; height: 1.1em; vertical-align: -0.18em; margin-inline-end: 3px; }
 
 .keypoints {
   margin: 16px 0; padding: 16px 18px; border-radius: 14px;
@@ -284,6 +286,7 @@ img { max-width: 100%; }
 .keypoints ul { margin: 0; padding-inline-start: 1.3em; }
 .keypoints li { margin: 5px 0; font-size: 0.93rem; }
 
+.vocab-h4 { margin: 16px 0 4px; font-size: 1rem; }
 .vocab-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; }
 .vocab-table th, .vocab-table td { border: 1px solid var(--border); padding: 9px 12px; text-align: right; }
 .vocab-table th { background: var(--primary-soft); color: var(--primary); font-size: 0.86rem; }
@@ -367,6 +370,30 @@ img { max-width: 100%; }
   .lesson-card > summary { padding: 15px 14px; }
   .qa-item .answer { padding: 4px 14px 12px; }
 }
+
+/* ===== آیکون‌های SVG (نهمیتو) ===== */
+.ico { display: inline-block; width: 1em; height: 1em; vertical-align: -0.14em; flex: none; }
+.ico-lg { width: 2.6em; height: 2.6em; vertical-align: 0; }
+.ico-primary { color: var(--primary); }
+.ico-accent { color: var(--accent); }
+.ico-warn { color: var(--warn); }
+.ico-violet { color: #8b5cf6; }
+html[data-theme="dark"] .ico-violet { color: #a78bfa; }
+
+.icon-btn .ico { width: 1.35em; height: 1.35em; }
+.search-box .search-ico { width: 1.2em; height: 1.2em; }
+.badge .ico { width: 1.15em; height: 1.15em; }
+.ico-hero { width: 0.95em; height: 0.95em; vertical-align: -0.05em; margin-inline: 0.12em; color: var(--primary); }
+.legend .ico { width: 1.2em; height: 1.2em; }
+.about-card h3 .ico { width: 1.15em; height: 1.15em; margin-inline-end: 6px; }
+.bc-icon .ico { width: 1.55em; height: 1.55em; color: var(--c, var(--primary)); }
+.book-hero .bc-icon .ico { width: 1.75em; height: 1.75em; }
+.chev .ico { width: 1.15em; height: 1.15em; }
+.back-top .ico { width: 1.3em; height: 1.3em; }
+.done .ico { width: 1.05em; height: 1.05em; color: var(--accent); }
+.btn .ico { width: 1.15em; height: 1.15em; vertical-align: -0.18em; margin-inline-end: 6px; }
+.keypoints h4 .ico, .qa-block h4 .ico, .vocab-h4 .ico { width: 1.15em; height: 1.15em; margin-inline-end: 6px; vertical-align: -0.18em; }
+.qa-block h4 .ico { color: var(--primary); }
 
 /* ===== چاپ ===== */
 @media print {

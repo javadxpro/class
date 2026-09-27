@@ -1,51 +1,51 @@
 /* فهرست کتاب‌ها (فراداده) — نُهم‌یار */
 window.BOOKS_META = [
   {
-    id: "math", title: "ریاضی", icon: "📐", color: "#6366f1", tag: "۸ فصل", cat: "main",
+    id: "math", title: "ریاضی", icon: "math", color: "#6366f1", tag: "۸ فصل", cat: "main",
     desc: "مجموعه‌ها، اعداد حقیقی، استدلال و اثبات در هندسه، توان و ریشه، عبارت‌های جبری و گویا، خط و معادله‌های خطی، حجم و مساحت."
   },
   {
-    id: "science", title: "علوم تجربی", icon: "🔬", color: "#10b981", tag: "۱۵ فصل", cat: "main",
+    id: "science", title: "علوم تجربی", icon: "science", color: "#10b981", tag: "۱۵ فصل", cat: "main",
     desc: "شیمی، فیزیک، زمین‌شناسی، زیست‌شناسی و محیط زیست؛ از مواد و اتم‌ها تا نیرو، فشار، ماشین‌ها و گوناگونی جانداران."
   },
   {
-    id: "farsi", title: "ادبیات فارسی", icon: "📖", color: "#f59e0b", tag: "۱۷ درس", cat: "main",
+    id: "farsi", title: "ادبیات فارسی", icon: "farsi", color: "#f59e0b", tag: "۱۷ درس", cat: "main",
     desc: "خلاصه درس‌ها، آرایه‌های ادبی، قواعد دستوری، معنی واژه‌ها و سوالات احتمالی املا و ادبیات."
   },
   {
-    id: "arabi", title: "عربی", icon: "🕌", color: "#0ea5e9", tag: "۱۰ درس", cat: "main",
+    id: "arabi", title: "عربی", icon: "arabic", color: "#0ea5e9", tag: "۱۰ درس", cat: "main",
     desc: "ترجمه و درک مطلب درس‌به‌درس، قواعد مهم (امر، نهی، ضمایر، اعداد، ترکیب‌ها) و واژگان کلیدی."
   },
   {
-    id: "english", title: "زبان انگلیسی (Prospect 3)", icon: "🌍", color: "#8b5cf6", tag: "۶ درس", cat: "main",
+    id: "english", title: "زبان انگلیسی (Prospect 3)", icon: "english", color: "#8b5cf6", tag: "۶ درس", cat: "main",
     desc: "لغات، گرامر و مکالمات کتاب Prospect 3؛ Personality، Travel، Festivals، Services، Media و Health & Injuries."
   },
   {
-    id: "social", title: "مطالعات اجتماعی", icon: "🗺️", color: "#ef4444", tag: "۲۴ درس", cat: "main",
+    id: "social", title: "مطالعات اجتماعی", icon: "social", color: "#ef4444", tag: "۲۴ درس", cat: "main",
     desc: "جغرافیا، تاریخ و مدنی؛ از زمین و زیست‌بوم‌ها تا عصر صفوی، مشروطه، انقلاب اسلامی، خانواده و حکومت."
   },
   {
-    id: "quran", title: "آموزش قرآن", icon: "🕋", color: "#14b8a6", tag: "۱۱ درس", cat: "rel",
+    id: "quran", title: "آموزش قرآن", icon: "quran", color: "#14b8a6", tag: "۱۱ درس", cat: "rel",
     desc: "معنی و مفاهیم سوره‌های شوری، زخرف، دخان، جاثیه، احقاف، محمد، فتح، حجرات، الرحمن، واقعه، ملک، نبا و…"
   },
   {
-    id: "payam", title: "پیام‌های آسمان", icon: "🌙", color: "#059669", tag: "۱۲ درس", cat: "rel",
+    id: "payam", title: "پیام‌های آسمان", icon: "payam", color: "#059669", tag: "۱۲ درس", cat: "rel",
     desc: "خداشناسی، راهنماشناسی، احکام نماز و طهارت، اخلاق و جامعه اسلامی به زبان ساده با سوالات احتمالی."
   },
   {
-    id: "defa", title: "آمادگی دفاعی", icon: "🛡️", color: "#dc2626", tag: "۱۱ درس", cat: "skill",
+    id: "defa", title: "آمادگی دفاعی", icon: "defa", color: "#dc2626", tag: "۱۱ درس", cat: "skill",
     desc: "امنیت، تهاجم و دفاع، انقلاب اسلامی، بسیج، دفاع مقدس، جنگ نرم، پدافند غیرعامل و ایمنی در زمین‌لرزه."
   },
   {
-    id: "tech", title: "کار و فناوری", icon: "⚙️", color: "#f97316", tag: "۱۱ پودمان", cat: "skill",
+    id: "tech", title: "کار و فناوری", icon: "tech", color: "#f97316", tag: "۱۱ پودمان", cat: "skill",
     desc: "الگوریتم، ترسیم با رایانه، ساز و کارهای حرکتی، برنامه‌نویسی پایتون، برق، عمران، خودرو و هدایت تحصیلی."
   },
   {
-    id: "honar", title: "فرهنگ و هنر", icon: "🎨", color: "#d946ef", tag: "۵ بخش", cat: "skill",
+    id: "honar", title: "فرهنگ و هنر", icon: "art", color: "#d946ef", tag: "۵ بخش", cat: "skill",
     desc: "طراحی، نگاشتار (گرافیک)، عکاسی، خوشنویسی، هنرهای سنتی، هنرهای آوایی و نمایشی."
   },
   {
-    id: "negaresh", title: "نگارش", icon: "✒️", color: "#64748b", tag: "۸ درس", cat: "skill",
+    id: "negaresh", title: "نگارش", icon: "write", color: "#64748b", tag: "۸ درس", cat: "skill",
     desc: "مهارت‌های نوشتن: واژه‌گزینی، ساختار نوشته، آغاز و پایان‌بندی، قالب‌های نگارشی و گسترش متن."
   }
 ];

@@ -62,7 +62,7 @@
     if (btn) {
       const sync = () => {
         const t = document.documentElement.getAttribute("data-theme");
-        btn.textContent = t === "dark" ? "☀️" : "🌙";
+        btn.innerHTML = window.ICONS.svg(t === "dark" ? "sun" : "moon");
         btn.title = t === "dark" ? "حالت روشن" : "حالت تاریک";
       };
       sync();
@@ -113,7 +113,7 @@
       if (q.length < 2) { box.classList.remove("open"); box.innerHTML = ""; return; }
       const hits = index.filter(r => r.text.includes(q)).slice(0, 12);
       if (!hits.length) {
-        box.innerHTML = '<div class="sr-empty">چیزی پیدا نشد 🤷‍♂️</div>';
+        box.innerHTML = '<div class="sr-empty">' + window.ICONS.svg("search-x", "ico-lg") + "<div>چیزی پیدا نشد</div></div>";
       } else {
         box.innerHTML = hits.map(r => {
           const href = "book.html?b=" + r.book.id + "#les-" + r.ls.id;
@@ -164,7 +164,7 @@
     grid.innerHTML = books.map(b => {
       const st = window.Nahomyar.bookStats(b);
       return '<a class="book-card" href="book.html?b=' + b.id + '" data-cat="' + (b.cat || "main") + '" style="--c:' + (b.color || "#4f46e5") + '">' +
-        '<div class="bc-top"><div class="bc-icon">' + (b.icon || "📘") + "</div>" +
+        '<div class="bc-top"><div class="bc-icon">' + window.ICONS.svg(b.icon || "book") + "</div>" +
         '<div><div class="bc-title">' + b.title + '</div><span class="bc-tag">' + (b.tag || "") + "</span></div></div>" +
         '<p class="bc-desc">' + (b.desc || "") + "</p>" +
         '<div class="bc-foot"><div class="progress"><i style="width:' + st.pct + '%"></i></div>' +
@@ -188,14 +188,14 @@
       hero.style.setProperty("--c", book.color || "#4f46e5");
       hero.innerHTML =
         '<div class="book-hero-inner">' +
-        '<div class="bc-icon">' + (book.icon || "📘") + "</div>" +
+        '<div class="bc-icon">' + window.ICONS.svg(book.icon || "book") + "</div>" +
         "<div style=\"flex:2;min-width:240px\"><div class=\"breadcrumb\"><a href=\"index.html\">خانه</a> › " + book.title + "</div>" +
         "<h1>" + book.title + " نهم</h1><p class=\"sub\">" + (book.desc || "") + "</p></div>" +
         '<div class="book-progress-wrap"><div class="bc-foot"><div class="progress"><i id="bookProgBar" style="width:0%"></i></div>' +
         '<span class="progress-label" id="bookProgLabel">۰٪</span></div>' +
         '<div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">' +
         '<button class="btn btn-soft" id="expandAll" type="button">گشودن همه درس‌ها</button>' +
-        '<button class="btn btn-ghost" id="printBook" type="button">🖨️ چاپ / PDF</button></div></div></div>';
+        '<button class="btn btn-ghost" id="printBook" type="button">' + window.ICONS.svg("print") + " چاپ / PDF</button></div></div></div>";
     }
 
     const toc = $("#bookToc");
@@ -229,7 +229,7 @@
       if (bar) bar.style.width = st.pct + "%";
       if (lab) lab.textContent = " " + st.done.toLocaleString("fa-IR") + " از " + st.total.toLocaleString("fa-IR") + " درس (" + st.pct.toLocaleString("fa-IR") + "٪)";
       $$("[data-done-for]").forEach(el => {
-        el.textContent = window.Nahomyar.progress()[book.id + ":" + el.dataset.doneFor] ? "✓" : "";
+        el.innerHTML = window.Nahomyar.progress()[book.id + ":" + el.dataset.doneFor] ? window.ICONS.svg("check", "ico-done") : "";
       });
     }
     refreshProgress();
@@ -279,21 +279,21 @@
     const lid = ls.id;
     const done = !!(window.Nahomyar.progress()[book.id + ":" + lid]);
     const pts = (ls.points && ls.points.length)
-      ? '<div class="keypoints"><h4>⭐ نکات کلیدی</h4><ul>' + ls.points.map(p => "<li>" + p + "</li>").join("") + "</ul></div>"
+      ? '<div class="keypoints"><h4>' + window.ICONS.svg("star") + " نکات کلیدی</h4><ul>" + ls.points.map(p => "<li>" + p + "</li>").join("") + "</ul></div>"
       : "";
     const vocab = (ls.vocab && ls.vocab.length)
-      ? '<h4 style="margin:16px 0 4px">📚 واژگان و مفاهیم</h4><table class="vocab-table"><thead><tr><th>واژه / مفهوم</th><th>معنی و توضیح</th></tr></thead><tbody>' +
+      ? '<h4 class="vocab-h4">' + window.ICONS.svg("library", "ico-violet") + ' واژگان و مفاهیم</h4><table class="vocab-table"><thead><tr><th>واژه / مفهوم</th><th>معنی و توضیح</th></tr></thead><tbody>' +
         ls.vocab.map(v => "<tr><td dir='auto'><b>" + v[0] + "</b></td><td>" + v[1] + "</td></tr>").join("") + "</tbody></table>"
       : "";
     const qa = (ls.qa && ls.qa.length)
-      ? '<div class="qa-block"><h4>❓ سوالات احتمالی امتحان</h4>' + ls.qa.map((q, i) =>
+      ? '<div class="qa-block"><h4>' + window.ICONS.svg("help") + " سوالات احتمالی امتحان</h4>" + ls.qa.map((q, i) =>
           '<details class="qa-item"><summary><span class="q-ico">' + (i + 1) + "</span><span>" + q.q + "</span></summary>" +
           '<div class="answer">' + q.a + "</div></details>").join("") + "</div>"
       : "";
     return '<details class="lesson-card" id="les-' + lid + '">' +
       '<summary><span class="lesson-num">' + n.toLocaleString("fa-IR") + "</span>" +
       '<span class="lesson-title">' + ls.title + "</span>" +
-      '<span class="chev">▼</span></summary>' +
+      '<span class="chev">' + window.ICONS.svg("chevron") + "</span></summary>" +
       '<div class="lesson-body">' +
       '<div style="margin:12px 0"><label class="mark-read' + (done ? " checked" : "") + '">' +
       '<input type="checkbox" data-lesson="' + lid + '"' + (done ? " checked" : "") + "> این درس را خوانده‌ام</label></div>" +
@@ -377,5 +377,6 @@
       setBookMeta({ id: meta.id, title: meta.title, chapters: [] });
     }
     initQuerySearch();
+    window.ICONS.hydrate(document);
   });
 })();
